@@ -46,6 +46,7 @@ function getData(fileDirectory, opt_path) {
   const dataFile = 'data.json'
   const folderData = fileDirectory + '/' + dataFile;
   const templateData = (opt_path || '').replace(/html$/, 'json');
+  console.log('Grabbing data from', dataFile);
   let data = dataFile;
 
   const templateDataExists =
@@ -118,7 +119,7 @@ function getPartials(acc, embedderDir, template) {
 gulp.task('build', 'build', function(cb) {
   runSequence(
       'clean', 'highlight', 'escape', 'img', 'templateapi', 'postcss', 'countcss', 'posthtml', 'www', 'validate',
-      'bundle', 'configurator', cb);
+       'configurator', cb);
 });
 
 gulp.task('build:dev', 'runs a more lightweight build, meant for development and not production', function(cb) {
