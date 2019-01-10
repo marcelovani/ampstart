@@ -1,0 +1,8 @@
+name = AMP Base
+description = The AMP Base theme converts core templates to use AMP HTML.
+package = Custom
+core = 7.x
+
+regions[header]  = Header
+regions[content] = Main
+regions[footer]  = Footer

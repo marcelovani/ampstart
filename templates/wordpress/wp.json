@@ -1,0 +1,19 @@
+{
+  "page": {
+    "head-tag": {
+      "title": "WP Template",
+      "canonical-path": "templates/wp.amp",
+      "extensions": [
+        "amp-list",
+        "amp-bind"
+      ],
+      "templates": [
+        "amp-mustache"
+      ],
+      "css-path": "templates/travel/travel.css",
+      "font-stylesheets": [
+        "https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700"
+      ]
+    }
+  }
+}
