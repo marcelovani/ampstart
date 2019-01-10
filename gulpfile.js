@@ -119,7 +119,7 @@ function getPartials(acc, embedderDir, template) {
 gulp.task('build', 'build', function(cb) {
   runSequence(
       'clean', 'highlight', 'escape', 'img', 'templateapi', 'postcss', 'countcss', 'posthtml', 'www', 'validate',
-       'configurator', cb);
+    'bundle', 'configurator', cb);
 });
 
 gulp.task('build:dev', 'runs a more lightweight build, meant for development and not production', function(cb) {

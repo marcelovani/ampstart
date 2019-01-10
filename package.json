@@ -1,19 +1,38 @@
 {
   "name": "kickstart",
-  "engines": {
-    "node": "^7.0.0"
-  },
+  "private": true,
+  "license": "Apache-2.0",
   "scripts": {
     "build": "gulp build",
     "clean": "gulp clean",
-    "www": "gulp www",
+    "configurator": "gulp configurator:serve",
     "highlight": "gulp highlight",
-    "watch": "gulp watch:www",
     "serve": "gulp serve",
-    "configurator": "gulp configurator:serve"
+    "watch": "gulp watch:www",
+    "www": "gulp www"
   },
-  "private": true,
-  "license": "Apache-2.0",
+  "eslintConfig": {
+    "env": {
+      "browser": true
+    },
+    "extends": [
+      "xo-space/esnext"
+    ],
+    "parser": "babel-eslint",
+    "root": true
+  },
+  "dependencies": {
+    "basscss": "^8.0.3",
+    "basscss-addons": "^1.0.0",
+    "basscss-basic": "^1.0.0",
+    "event-stream": "^3.3.4",
+    "gulp-zip": "^4.0.0",
+    "normalize.css": "^5.0.0",
+    "postcss": "5.2.14",
+    "postcss-custom-properties": "^5.0.1",
+    "query-string": "^5.0.0",
+    "whatwg-fetch": "^2.0.3"
+  },
   "devDependencies": {
     "autoprefixer": "^6.5.3",
     "babel-core": "^6.23.1",
@@ -83,31 +102,12 @@
     "webpack-hot-middleware": "^2.17.0",
     "worker-loader": "^0.8.1"
   },
-  "dependencies": {
-    "basscss": "^8.0.3",
-    "basscss-addons": "^1.0.0",
-    "basscss-basic": "^1.0.0",
-    "event-stream": "^3.3.4",
-    "gulp-zip": "^4.0.0",
-    "normalize.css": "^5.0.0",
-    "postcss": "5.2.14",
-    "postcss-custom-properties": "^5.0.1",
-    "query-string": "^5.0.0",
-    "whatwg-fetch": "^2.0.3"
+  "engines": {
+    "node": "^7.0.0"
   },
   "configuratorDependencies": [
     "postcss",
     "postcss-custom-properties",
     "query-string"
-  ],
-  "eslintConfig": {
-    "root": true,
-    "env": {
-      "browser": true
-    },
-    "extends": [
-      "xo-space/esnext"
-    ],
-    "parser": "babel-eslint"
-  }
+  ]
 }
